@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveMeSomeMoney", "SaveMeSomeMoney\SaveMeSomeMoney.csproj", "{C07914AA-1162-4EBE-A8CB-A160FA46B4D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveMeSomeMoney.Web", "SaveMeSomeMoney.Web\SaveMeSomeMoney.Web.csproj", "{A075AF53-3F3E-4DCF-BAB7-37046CD5E0BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveMeSomeMoney.Services", "SaveMeSomeMoney.Services\SaveMeSomeMoney.Services.csproj", "{A7AC0BA3-4F23-49BA-A512-321B033AABBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C07914AA-1162-4EBE-A8CB-A160FA46B4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C07914AA-1162-4EBE-A8CB-A160FA46B4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C07914AA-1162-4EBE-A8CB-A160FA46B4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C07914AA-1162-4EBE-A8CB-A160FA46B4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A075AF53-3F3E-4DCF-BAB7-37046CD5E0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A075AF53-3F3E-4DCF-BAB7-37046CD5E0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A075AF53-3F3E-4DCF-BAB7-37046CD5E0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A075AF53-3F3E-4DCF-BAB7-37046CD5E0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AC0BA3-4F23-49BA-A512-321B033AABBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AC0BA3-4F23-49BA-A512-321B033AABBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AC0BA3-4F23-49BA-A512-321B033AABBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AC0BA3-4F23-49BA-A512-321B033AABBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
