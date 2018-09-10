@@ -6,12 +6,16 @@ namespace SaveMeSomeMoney.Services.Repositories
 {
     public class AppDbContext : DbContext, IAppDbContext
     {
+        public DbSet<Expense> Expenses { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
-
         }
 
-        public DbSet<Expense> Expenses { get; set; }
+        public void SaveChangesAsync()
+        {
+            SaveChangesAsync();
+        }
     }
 }

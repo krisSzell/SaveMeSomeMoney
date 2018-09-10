@@ -15,6 +15,16 @@ namespace SaveMeSomeMoney.Services.Repositories
             _context = context;
         }
 
+        public void Add(Expense expense, bool shouldSaveContext = true)
+        {
+            _context.Expenses.Add(expense);
+
+            if (shouldSaveContext)
+            {
+                _context.SaveChanges();
+            }
+        }
+
         public async Task<List<Expense>> GetAll()
         {
             return await _context.Expenses.ToListAsync();
