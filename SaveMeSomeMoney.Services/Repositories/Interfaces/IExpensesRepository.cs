@@ -7,6 +7,8 @@ namespace SaveMeSomeMoney.Services.Repositories.Interfaces
     public interface IExpensesRepository
     {
         Task<List<Expense>> GetAll();
-        void Add(Expense expense, bool shouldSaveContext = true);
+        Task AddAsync(Expense expense, bool shouldSaveContext = true);
+        Task<bool> UpdateAsync(int id, Expense expense);
+        Task<bool> DeleteAsync(int id);
     }
 }
