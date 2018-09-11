@@ -5,16 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20180910183237_Init.cs" />
-    <Compile Remove="Migrations\20180911092730_AddedExpenseCategory.cs" />
-    <Compile Remove="Migrations\20180911093617_AddedExpenseCategory.cs" />
-    <Compile Remove="Migrations\20180911094126_AddedExpenseCategory.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
   </ItemGroup>
 
   <ItemGroup>

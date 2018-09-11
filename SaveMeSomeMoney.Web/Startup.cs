@@ -25,6 +25,12 @@ namespace SaveMeSomeMoney
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
+
+            //BsonClassMap.RegisterClassMap<Income>(cm =>
+            //{
+            //    cm.AutoMap();
+            //    cm.MapCreator(i => new Income(i.Id, i.Category, i.Value));
+            //});
         }
 
         public IServiceProvider ConfigureServices(IServiceCollection services)

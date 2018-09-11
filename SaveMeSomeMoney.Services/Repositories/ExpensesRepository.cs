@@ -25,7 +25,7 @@ namespace SaveMeSomeMoney.Services.Repositories
             }
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(string id)
         {
             var expenseToDelete = await _context.Expenses.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace SaveMeSomeMoney.Services.Repositories
             return await _context.Expenses.ToListAsync();
         }
 
-        public async Task<bool> UpdateAsync(int id, Expense expense)
+        public async Task<bool> UpdateAsync(string id, Expense expense)
         {
             var oldExpense = await _context.Expenses.FindAsync(id);
 

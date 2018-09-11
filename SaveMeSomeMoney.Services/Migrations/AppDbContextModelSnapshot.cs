@@ -20,13 +20,12 @@ namespace SaveMeSomeMoney.Services.Migrations
 
             modelBuilder.Entity("SaveMeSomeMoney.Services.Models.Expense", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description");
 
-                    b.Property<int>("ExpenseCategoryId");
+                    b.Property<string>("ExpenseCategoryId");
 
                     b.Property<decimal>("Value");
 
@@ -39,9 +38,8 @@ namespace SaveMeSomeMoney.Services.Migrations
 
             modelBuilder.Entity("SaveMeSomeMoney.Services.Models.ExpenseCategory", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
 
@@ -58,8 +56,7 @@ namespace SaveMeSomeMoney.Services.Migrations
                 {
                     b.HasOne("SaveMeSomeMoney.Services.Models.ExpenseCategory", "ExpenseCategory")
                         .WithMany("Expenses")
-                        .HasForeignKey("ExpenseCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ExpenseCategoryId");
                 });
 #pragma warning restore 612, 618
         }
