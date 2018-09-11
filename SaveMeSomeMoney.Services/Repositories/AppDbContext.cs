@@ -9,6 +9,8 @@ namespace SaveMeSomeMoney.Services.Repositories
 
         public DbSet<ExpenseCategory> ExpenseCategories { get; set; }
 
+        public DbSet<Income> Incomes { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

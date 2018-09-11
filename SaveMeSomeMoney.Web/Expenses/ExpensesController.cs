@@ -44,7 +44,7 @@ namespace SaveMeSomeMoney.Web.Expenses
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
         [Route("/api/expenses/{id}/update")]
-        public async Task<ActionResult<Expense>> Update(string id, Expense expense)
+        public async Task<ActionResult<Expense>> Update(int id, Expense expense)
         {
             if (!await _expensesRepository.UpdateAsync(id, expense))
             {
@@ -58,7 +58,7 @@ namespace SaveMeSomeMoney.Web.Expenses
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
         [Route("/api/expenses/{id}/delete")]
-        public async Task<ActionResult> DeleteAsync(string id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
             if (!await _expensesRepository.DeleteAsync(id))
             {
