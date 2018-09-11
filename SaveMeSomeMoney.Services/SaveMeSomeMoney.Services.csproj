@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <Compile Remove="Migrations\20180910183237_Init.cs" />
+    <Compile Remove="Migrations\20180911092730_AddedExpenseCategory.cs" />
+    <Compile Remove="Migrations\20180911093617_AddedExpenseCategory.cs" />
+    <Compile Remove="Migrations\20180911094126_AddedExpenseCategory.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -26,11 +26,40 @@ namespace SaveMeSomeMoney.Services.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<int>("ExpenseCategoryId");
+
                     b.Property<decimal>("Value");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ExpenseCategoryId");
+
                     b.ToTable("Expenses");
+                });
+
+            modelBuilder.Entity("SaveMeSomeMoney.Services.Models.ExpenseCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique()
+                        .HasFilter("[Name] IS NOT NULL");
+
+                    b.ToTable("ExpenseCategories");
+                });
+
+            modelBuilder.Entity("SaveMeSomeMoney.Services.Models.Expense", b =>
+                {
+                    b.HasOne("SaveMeSomeMoney.Services.Models.ExpenseCategory", "ExpenseCategory")
+                        .WithMany("Expenses")
+                        .HasForeignKey("ExpenseCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
